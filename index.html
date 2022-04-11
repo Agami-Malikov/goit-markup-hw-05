@@ -59,11 +59,57 @@
     <section class="hero">
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button class="modal__close-btn" type="button" data-modal-close></button>
+          <div class="modal__contact">
+            <form class="modal__form">
+              <span class="modal__close" data-modal-close></span>
+              <p class="modal__text">
+                Оставьте свои данные, мы вам перезвоним
+              </p>
+
+              <label for="name">Имя</label>
+              <div class="modal__item">
+                <input class="modal__input" id="name" type="text" name="name" autocomplete="off" required>
+                <svg class="modal__icon" width="15" height="15">
+                  <use href="./images/sprites/form-icons.svg#icon-person"></use>
+                </svg>
+              </div>
+
+              <label for="phone">Телефон</label>
+              <div class="modal__item">
+                <input class="modal__input" id="phone" type="tel" name="phone" required>
+                <svg class="modal__icon" width="15" height="15">
+                  <use href="./images/sprites/form-icons.svg#icon-phone"></use>
+                </svg>
+              </div>
+
+              <label class="modal__label" for="modal-email">Почта</label>
+              <div class="modal__item">
+                <input class="modal__input" id="modal-email" type="email" name="modal-email" required>
+                <svg class="modal__icon" width="15" height="15">
+                  <use href="./images/sprites/form-icons.svg#icon-email-black"></use>
+                </svg>
+              </div>
+
+              <label class="modal__label" for="message">Комментарий</label>
+              <textarea class="modal__text-area" id="message" name="message" placeholder="Введите текст"></textarea>
+
+              <label class="modal__check-box" for="check">
+                <input class="modal__check" type="checkbox" id="check">
+                Соглашаюсь с рассылкой и принимаю<a href="#">Условия договора</a>
+                <span class="check-box-custom">
+                  <svg class="check-box-icon">
+                    <use href="./images/sprites/form-icons.svg#icon-check"></use>
+                  </svg>
+                </span>
+              </label>
+
+              <button class="modal__btn btn" type="submit">Отправить</button>
+            </form>
+          </div>
         </div>
       </div>
       <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-      <button class="hero__button" type="button" data-modal-open>Заказать услугу</button>
+      <button class="hero__button btn" type="button" data-modal-open>Заказать услугу</button>
     </section>
     <section class="peculiarity section">
       <div class="container">
@@ -433,6 +479,21 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="footer__subscr">
+          <p class="footer__subscr-text">
+            Подпишитесь на рассылку
+          </p>
+          <form class="footer__subscr-form">
+            <label class="visually-hidden" for="email">введите ваш почтовый адрес</label>
+            <input class="footer__subscr-input" id="email" type="text" name="email" placeholder="E-mail" required>
+            <button class="footer__subscr-btn btn" type="submit">
+              Подписаться
+              <svg class="footer__subscr-icon" width="24" height="24">
+                <use href="./images/sprites/form-icons.svg#icon-tg"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </div>
